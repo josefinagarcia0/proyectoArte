@@ -287,32 +287,6 @@ footer ul li{
     margin: 10px;
 }
 
-@media screen and (min-width:720px) {
-    .parrafo{
-        min-width: 500px;
-        max-width: 500px;
-    }
-}
-
-@media screen and (min-width:1080px) {
-    .sobre-mi{
-        display: grid;
-        grid-template-areas: "texto imagen";
-        justify-content: center;
-    }
-    .imagen-sobreMi{
-        width: 400px;
-        height: 400px;
-    }
-    .parrafo{
-        min-width: 600px;
-        max-width: 700px;
-    }
-    .parrafo p{
-        font-size: larger;
-        text-align: left;
-    }
-}
 
 /* --------- estilos contacto/pages --------- */
 .contacto{
@@ -376,34 +350,7 @@ footer ul li{
 .boton-about:active {
     transform: translateY(1px);
 }
-@media screen and (min-width: 720px) {
-    .form-contacto{
-        width: 60%;
-    }
-}
-@media screen and (min-width:1080px) {
-    .contacto{
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-areas: "info form";
-        justify-items: center;
-        gap: 1rem;
-    }
 
-    .data-contacto iframe{
-        display: block;
-        padding-top: 20px;
-        width: 400px; 
-        height: 250px;
-    }
-
-    .data-contacto{
-        text-align: left;
-    }
-    .form-contacto{
-        width: 90%;
-    }
-}
 
 /* --------- estilos coleccion/pages --------- */
 .aside{
@@ -435,7 +382,184 @@ footer ul li{
     text-underline-offset: 5px;
 }
 
+.galeria{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    justify-items: center;
+    margin: 40px 80px;
+}
+
+.galeria-img{
+    width: 200px;
+    height: 250px;
+    transition: all 0.1s;
+}
+
+.galeria-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.galeria-img:hover{
+    opacity: 0.8;
+    transform: scale(1.02);
+    box-shadow: 0 4px 18px 0 rgba(0, 0, 0, 0.25);
+}
+
+
+/* --------- estilos blog/pages --------- */
+.blog{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    margin: 20px;
+}
+.video{
+    padding: 10px;
+}
+.video iframe{
+    width: 350px;
+    height: 200px;
+    box-shadow: 0 4px 18px 0 rgba(0, 0, 0, 0.25);
+}
+
+.parrafo-blog{
+    padding: 10px;
+    min-width: 350px;
+    max-width: 350px;
+}
+
+.parrafo-blog h2{
+    padding-bottom: 10px;
+}
+
+.parrafo-blog p{
+    padding-bottom: 10px;
+}
+
+
+/* ---------- MEDIA QUERIES ---------- */
+@media screen and (min-width:720px) {
+    /* mq - sobre mi */
+    .parrafo{
+        min-width: 500px;
+        max-width: 500px;
+    }
+
+    /* mq - contacto */
+    .form-contacto{
+        width: 60%;
+    }
+
+    /* mq - coleccion */
+    .puflito{
+        display: grid;
+        grid-template-columns: 1fr 5fr;
+        grid-template-areas: "aside galeria";
+    }
+    .galeria{
+        grid-area: galeria;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+
+    .galeria-img{
+        width: 250px;
+        height: 300px;
+    }
+}
+
+@media screen and (min-width:1080px) {
+    /* mq - sobre mi */
+    .sobre-mi{
+        display: grid;
+        grid-template-areas: "texto imagen";
+        justify-content: center;
+    }
+    .imagen-sobreMi{
+        width: 400px;
+        height: 400px;
+    }
+    .parrafo{
+        min-width: 600px;
+        max-width: 700px;
+    }
+    .parrafo p{
+        font-size: larger;
+        text-align: left;
+    }
+
+    /* mq - contacto */
+    .contacto{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: "info form";
+        justify-items: center;
+        gap: 1rem;
+    }
+
+    .data-contacto iframe{
+        display: block;
+        padding-top: 20px;
+        width: 400px; 
+        height: 250px;
+    }
+
+    .data-contacto{
+        text-align: left;
+    }
+    .form-contacto{
+        width: 90%;
+    }
+
+    /* mq - blog - estaba en 1115 */
+    .main-blog{
+        height: 80vh;
+    }
+
+    .blog{
+        display: grid;
+        grid-template-areas: "texto video";
+        gap: 2rem;
+        justify-content: center;
+    }
+    .parrafo-blog{
+        font-size: larger;
+    }
+    .video iframe{
+        width: 600px;
+        height: 350px;
+    }
+}
+
+@media screen and (min-width:1400px) {
+    /* mq - coleccion */
+    .galeria{
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    }
+    .galeria-img{
+        width: 300px;
+        height: 350px;
+    }
+
+    /* mq - blog */
+    .blog{
+        gap: 5rem;
+    }
+    .parrafo-blog{
+        min-width: 600px;
+        max-width: 600px;
+    }
+    .video iframe{
+        width: 650px;
+        height: 400px;
+    }
+}
+
 @media screen and (max-width:720px) {
+    /* mq - coleccion */
     .aside{
         font-size: medium;
     }
@@ -495,119 +619,3 @@ footer ul li{
     }
 }
 
-.galeria{
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 20px;
-    justify-items: center;
-    margin: 40px 80px;
-}
-
-.galeria-img{
-    width: 200px;
-    height: 250px;
-    transition: all 0.1s;
-}
-
-.galeria-img img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.galeria-img:hover{
-    opacity: 0.8;
-    transform: scale(1.02);
-    box-shadow: 0 4px 18px 0 rgba(0, 0, 0, 0.25);
-}
-
-@media screen and (min-width:720px) {
-    .puflito{
-        display: grid;
-        grid-template-columns: 1fr 5fr;
-        grid-template-areas: "aside galeria";
-    }
-    .galeria{
-        grid-area: galeria;
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    }
-
-    .galeria-img{
-        width: 250px;
-        height: 300px;
-    }
-}
-@media screen and (min-width:1400px) {
-    .galeria{
-        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    }
-    .galeria-img{
-        width: 300px;
-        height: 350px;
-    }
-}
-
-/* --------- estilos blog/pages --------- */
-.blog{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 10px;
-    margin: 20px;
-}
-.video{
-    padding: 10px;
-}
-.video iframe{
-    width: 350px;
-    height: 200px;
-    box-shadow: 0 4px 18px 0 rgba(0, 0, 0, 0.25);
-}
-
-.parrafo-blog{
-    padding: 10px;
-    min-width: 350px;
-    max-width: 350px;
-}
-
-.parrafo-blog h2{
-    padding-bottom: 10px;
-}
-
-.parrafo-blog p{
-    padding-bottom: 10px;
-}
-
-@media screen and (min-width:1150px) {
-    .main-blog{
-        height: 80vh;
-    }
-
-    .blog{
-        display: grid;
-        grid-template-areas: "texto video";
-        gap: 2rem;
-        justify-content: center;
-    }
-    .parrafo-blog{
-        font-size: larger;
-    }
-    .video iframe{
-        width: 600px;
-        height: 350px;
-    }
-}
-
-@media screen and (min-width:1400px) {
-    .blog{
-        gap: 5rem;
-    }
-    .parrafo-blog{
-        min-width: 600px;
-        max-width: 600px;
-    }
-    .video iframe{
-        width: 650px;
-        height: 400px;
-    }
-}
