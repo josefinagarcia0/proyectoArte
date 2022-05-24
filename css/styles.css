@@ -11,73 +11,24 @@
     font-family: 'Belleza', sans-serif;
 }
 
-/* --------- estilos header (all pages) --------- */
-header{
+/* --------- estilos bs ---------- */
+.navbar{
     background-color: white;
-    height: 70px;
-    position: sticky;
-    top: 0;
-    z-index: 1;
-    width: 100vw;
-    padding: 30px;
+    min-height: 80px;
     box-shadow: 0px 8px 10px rgba(0, 0, 0, 0.1);
 }
-
-.contenedor{
-    display: flex;
-    height: 100%;
-    width: 100%;
-    margin: 0 auto;
-    justify-content: space-between;
-    align-items: center;
+.nav-item{
+    padding: 10px;
 }
-
-.logo{
-    height: 20px;
-    margin: 10px;
+.logo img{
+    width: 150px;
 }
-
-.nav-label, .nav-input{
-    display: none;
+.navbar-nav .active{
+    text-decoration: underline wavy #cac3b3;
+    text-underline-offset: 9px;
 }
-
-.nav-menu{
-    display: grid;
-    grid-auto-flow: column;
-    gap: 3em;
-}
-
-.nav-menu a{
-    color: black;
-}
-
-.nav-menu li :hover{
-    color: #cac3b3;
-}
-
-@media screen and (max-width: 720px){
-    .nav-label{
-        display: block;
-        cursor: pointer;
-        color: black;
-    }
-    
-    .nav-menu{
-        position: fixed;
-        top: 70px;
-        bottom: 0;
-        background: whitesmoke;
-        width: 80%;
-        right: 0;
-        display: none;
-        justify-content: space-evenly;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .nav-input:checked + .nav-menu{
-        display: flex;
-    }
+a{
+    text-decoration: none;
 }
 
 /* ---------- estilos main (ruta de especificidad) ----------  */
@@ -172,7 +123,7 @@ footer ul li{
     text-align: center;
 }
 
-.boton-about{
+.btn{
     margin: 5px;
     padding: 1em 2em;
     font-size: 10px;
@@ -188,16 +139,15 @@ footer ul li{
     outline: none;
 }
 
-.boton-about a{
+.btn a{
     color: #000;
 }
 
-.boton-about:hover {
+.btn:hover {
     box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.1);
-    color: #fff !important;
     transform: translateY(-5px);
 }
-.boton-about:active {
+.btn:active {
     transform: translateY(-1px);
 }
 
@@ -410,38 +360,40 @@ footer ul li{
 
 
 /* --------- estilos blog/pages --------- */
+.main-blog{
+    min-height: 80vh;
+}
+
 .blog{
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 10px;
-    margin: 20px;
-}
-.video{
-    padding: 10px;
-}
-.video iframe{
-    width: 350px;
-    height: 200px;
-    box-shadow: 0 4px 18px 0 rgba(0, 0, 0, 0.25);
+    margin: 30px;
 }
 
 .parrafo-blog{
     padding: 10px;
+    grid-area: texto;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
     min-width: 350px;
-    max-width: 350px;
+    margin-bottom: 20px;
 }
 
-.parrafo-blog h2{
-    padding-bottom: 10px;
+.video{
+    grid-area: video;
+    width: 350px;
+    height: 200px;
+}
+.video iframe{
+    width: 100%;
+    height: 100%;
+    box-shadow: 0 4px 18px 0 rgba(0, 0, 0, 0.25);
 }
 
-.parrafo-blog p{
-    padding-bottom: 10px;
-}
 
-
-/* ---------- MEDIA QUERIES ---------- */
+/* ---------- MEDIA QUERIES (all pages)---------- */
 @media screen and (min-width:720px) {
     /* mq - sobre mi */
     .parrafo{
@@ -468,6 +420,16 @@ footer ul li{
     .galeria-img{
         width: 250px;
         height: 300px;
+    }
+
+    /* mq - blog */
+    .video{
+        width: 450px;
+        height: 250px;
+    }
+
+    .parrafo-blog{
+        font-size: larger;
     }
 }
 
@@ -514,23 +476,29 @@ footer ul li{
         width: 90%;
     }
 
-    /* mq - blog - estaba en 1115 */
-    .main-blog{
-        height: 80vh;
-    }
-
+    /* mq - blog  */
     .blog{
         display: grid;
+        grid-template-columns: 1fr 1fr;
         grid-template-areas: "texto video";
-        gap: 2rem;
-        justify-content: center;
+        gap: 20px;
+        justify-items: center;
+        align-items: center;
     }
+
     .parrafo-blog{
-        font-size: larger;
+        min-width: 600px;
+        max-width: 700px;
+        text-align: left;
+    }
+
+    .video{
+        width: 550px;
+        height: 350px;
     }
     .video iframe{
-        width: 600px;
-        height: 350px;
+        width: 100%;
+        height: 100%;
     }
 }
 
@@ -545,16 +513,9 @@ footer ul li{
     }
 
     /* mq - blog */
-    .blog{
-        gap: 5rem;
-    }
-    .parrafo-blog{
-        min-width: 600px;
-        max-width: 600px;
-    }
-    .video iframe{
-        width: 650px;
-        height: 400px;
+    .video{
+        width: 750px;
+        height: 450px;
     }
 }
 

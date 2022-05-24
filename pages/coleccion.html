@@ -5,23 +5,42 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon ref" href="../img/logo/logotipo.png">
+    <!-- link bs -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <!-- link css -->
     <link rel="stylesheet" href="../css/styles.css">
-    <script src="https://kit.fontawesome.com/1aef0d4d98.js" crossorigin="anonymous"></script>
     <title>Colection | Art</title>
 </head>
 <body>
     <header>
-        <nav class="contenedor">
-            <a href="../index.html"><img class="logo" src="../img/logo/logo-ae.png" alt="logotipo"></a>
-            <label for="menu" class="nav-label"><i class="fas fa-bars"></i></label>
-            <input type="checkbox" id="menu" class="nav-input">
-            <ul class="nav-menu">
-                <li><a href="../index.html"> Home </a></li>
-                <li><a href="sobremi.html"> About </a></li>
-                <li><a href="coleccion.html"> Colection </a></li>
-                <li><a href="contacto.html"> Contact </a></li>
-                <li><a href="blog.html"> Blog </a></li>
-            </ul>
+        <nav class="navbar navbar-expand-md navbar-light fixed-top navbar-main">
+            <div class="container">
+                <a href="#" class="navbar-brand logo">
+                    <img src="../img/logo/logo-ae.png" alt="Brand">
+                </a>
+                <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="mainNav">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item ms-auto">
+                            <a class="nav-link" href="../index.html"> Home </a>
+                        </li>
+                        <li class="nav-item ms-auto">
+                            <a class="nav-link" href="sobremi.html"> About </a>
+                        </li>
+                        <li class="nav-item ms-auto">
+                            <a class="nav-link active" href="coleccion.html"> Colection </a>
+                        </li>
+                        <li class="nav-item ms-auto">
+                            <a class="nav-link" href="contacto.html"> Contact </a>
+                        </li>
+                        <li class="nav-item ms-auto">
+                            <a class="nav-link" href="blog.html"> Blog </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </nav>
     </header>
 
@@ -49,13 +68,13 @@
                     <img src="../img/obras/cuadro1.jpeg" alt="Imagen">
                 </div>
                 <div class="galeria-img"> 
-                    <img src="../img/obras/cuadro2.jpeg" alt="Imagen">
+                    <img src="../img/obras/tela2.jpeg" alt="Imagen">
                 </div>
                 <div class="galeria-img">
                     <img src="../img/obras/cuadro3.jpeg" alt="Imagen"> 
                 </div>
                 <div class="galeria-img">
-                    <img src="../img/obras/cuadro4.jpeg" alt="Imagen">
+                    <img src="../img/obras/tela4.jpeg" alt="Imagen">
                 </div>
                 <div class="galeria-img">
                     <img src="../img/obras/cuadro5.jpeg" alt="Imagen">
@@ -64,13 +83,13 @@
                     <img src="../img/obras/tela1.jpeg" alt="Imagen">
                 </div>
                 <div class="galeria-img"> 
-                    <img src="../img/obras/tela2.jpeg" alt="Imagen">
+                    <img src="../img/obras/cuadro2.jpeg" alt="Imagen">
                 </div>
                 <div class="galeria-img">
                     <img src="../img/obras/tela3.jpeg" alt="Imagen"> 
                 </div>
                 <div class="galeria-img">
-                    <img src="../img/obras/tela4.jpeg" alt="Imagen">
+                    <img src="../img/obras/cuadro4.jpeg" alt="Imagen">
                 </div>
                 <div class="galeria-img">
                     <img src="../img/obras/tela5.jpeg" alt="Imagen">
@@ -88,5 +107,8 @@
             <li><h6>© Josefina Garcia Art 2022 - Todos los derechos reservados </h6></li>
         </ul>
     </footer>
+
+    <!-- bs js -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
 </body>
 </html>
