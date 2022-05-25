@@ -31,6 +31,16 @@ a{
     text-decoration: none;
 }
 
+/* ---------- estilos header ------------ */
+header{
+    background-color: white;
+    height: 10vh;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+
+}
+
 /* ---------- estilos main (ruta de especificidad) ----------  */
 .title{
     font-size: 1rem;
