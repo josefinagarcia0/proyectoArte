@@ -15,7 +15,6 @@
 .navbar{
     background-color: white;
     min-height: 80px;
-    box-shadow: 0px 8px 10px rgba(0, 0, 0, 0.1);
 }
 .nav-item{
     padding: 10px;
@@ -34,11 +33,11 @@ a{
 /* ---------- estilos header ------------ */
 header{
     background-color: white;
-    height: 10vh;
+    height: 8vh;
     position: sticky;
     top: 0;
     z-index: 1;
-
+    box-shadow: 0px 8px 10px rgba(0, 0, 0, 0.1);
 }
 
 /* ---------- estilos main (ruta de especificidad) ----------  */
@@ -180,15 +179,15 @@ footer ul li{
 
 .obras{
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
     gap: 20px;
     justify-items: center;
     padding-bottom: 60px;
 }
 
 .imagen{
-    width: 300px;
-    height: 350px;
+    width: 80%;
+    height: 80%;
     transition: all 0.1s;
 }
 
@@ -246,7 +245,6 @@ footer ul li{
     padding: 10px;
     margin: 10px;
 }
-
 
 /* --------- estilos contacto/pages --------- */
 .contacto{
@@ -351,8 +349,10 @@ footer ul li{
 }
 
 .galeria-img{
-    width: 200px;
-    height: 250px;
+    width: 80%;
+    height: 80%;
+    /* width: 200px;
+    height: 250px; */
     transition: all 0.1s;
 }
 
@@ -394,7 +394,7 @@ footer ul li{
 .video{
     grid-area: video;
     width: 350px;
-    height: 200px;
+    height: 250px;
 }
 .video iframe{
     width: 100%;
@@ -424,13 +424,13 @@ footer ul li{
     }
     .galeria{
         grid-area: galeria;
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     }
 
-    .galeria-img{
+    /* .galeria-img{
         width: 250px;
         height: 300px;
-    }
+    } */
 
     /* mq - blog */
     .video{
@@ -486,6 +486,12 @@ footer ul li{
         width: 90%;
     }
 
+    /* mq - coleccion */
+    .galeria{
+        grid-area: galeria;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    }
+
     /* mq - blog  */
     .blog{
         display: grid;
@@ -506,10 +512,6 @@ footer ul li{
         width: 550px;
         height: 350px;
     }
-    .video iframe{
-        width: 100%;
-        height: 100%;
-    }
 }
 
 @media screen and (min-width:1400px) {
@@ -517,10 +519,10 @@ footer ul li{
     .galeria{
         grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     }
-    .galeria-img{
+    /* .galeria-img{
         width: 300px;
         height: 350px;
-    }
+    } */
 
     /* mq - blog */
     .video{
